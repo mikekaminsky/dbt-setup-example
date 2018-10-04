@@ -1,5 +1,7 @@
 # DBT Tutorial
 
+This is a quick guide to getting set up with a test database you can use to take dbt for a test run. This guide assumes you already have postgresql installed and running (I like [postgres.app](https://postgresapp.com/)) and a working installation of python. It should be obvious that this is run on a mac -- should generalize to other unix systems easily enough, but god help you if you want to use Windows.
+
 ## Load the DVD rental Database to Local Postgres
 
 Log into your local postgresql server with psql.
@@ -36,7 +38,7 @@ $ pip install dbt
 $ dbt init dvd-rentals
 ```
 
-Save your username and password into a .env file and load that into your shell (or use something like [direnv](https://direnv.net/))
+Save your username and password into a `.env` file and load that into your shell (or use something like [direnv](https://direnv.net/))
 
 ```bash
 $ cd dvd-rentals
@@ -75,7 +77,7 @@ default:
 
 ## Test it out!
 
-If the gods are kind, you should be able to run dbt.
+If the gods are smiling on you this day, you should be able to run dbt.
 
 ```bash
 $ dbt run --profiles-dir .
